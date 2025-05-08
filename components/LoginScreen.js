@@ -1,22 +1,27 @@
 import React, { useState } from 'react';
 import { ScrollView, Text, StyleSheet, TextInput } from 'react-native';
 
-export default function WelcomeScreen() {
-  const [firstName, onChangeFirstName] = useState('');
+export default function LoginScreen() {
+    const [email, onChangeEmail] = useState('');
+    const [password, onChangePassword] = useState('');
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.headerText}>Welcome to Little Lemon</Text>
-      <Text style={styles.regularText}>
-        Little Lemon is a charming neighborhood bistro that serves simple food
-        and classic cocktails in a lively but casual environment. We would love
-        to hear more about your experience with us!
-      </Text>
-      <TextInput
-        style={styles.inputBox}
-        value={firstName}
-        onChangeText={onChangeFirstName}
-        placeholder={'First Name'}
-      />
+      <Text style={styles.regularText}>Login to continue </Text>
+            <TextInput
+              style={styles.inputBox}
+              value={email}
+              onChangeText={onChangeEmail}
+              placeholder={'email'}
+            />
+            <TextInput
+              secureTextEntry={true}
+              keyboardType={'default'}
+              style={styles.inputBox}
+              value={password}
+              onChangeText={onChangePassword}
+              placeholder={'password'}
+            />
     </ScrollView>
   );
 }
@@ -48,3 +53,4 @@ const styles = StyleSheet.create({
     backgroundColor: '#EDEFEE',
   },
 });
+
