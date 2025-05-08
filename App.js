@@ -26,3 +26,5 @@ const styles = StyleSheet.create({
   },
   footerContainer: { backgroundColor: '#333333' },
 });
+
+
