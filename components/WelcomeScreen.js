@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, Text, StyleSheet, TextInput } from 'react-native';
+import { ScrollView, Text, StyleSheet, TextInput, Pressable } from 'react-native';
 
 export default function WelcomeScreen() {
   const [firstName, onChangeFirstName] = useState('');
